@@ -40,7 +40,7 @@ if(isset($_POST['identifiant']) && isset($_POST['mot_de_passe'])) {
         $_SESSION['identifiant'] = $_POST['identifiant'];
 
         $query2 = $pdo->prepare('SELECT * 
-                                FROM '.$info['type_de_compte'].' 
+                                FROM '.$info['type_'].' 
                                 WHERE email LIKE "'.$_POST['identifiant'].'"');
         $query2->execute();
 
