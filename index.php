@@ -14,7 +14,7 @@ session_start();
         <span ID="title_span">
             <h1>Docto-covid-allo</h1>
             <?php if (isset($_SESSION['IS_CONNECTED'])) {
-                ?><h2>Bienvenu <?php $_SESSION['donnees']['prenom']?> </h2><?php
+                ?><h2>Bienvenue <?php echo($_SESSION['donnees']['prenom'])?> </h2><?php
             }    
             ?>
         </span>

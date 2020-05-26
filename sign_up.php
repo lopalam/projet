@@ -60,10 +60,6 @@ if(isset($_POST['email']) && isset($_POST['mot_de_passe']) && isset($_POST['veri
                                     FROM '.$_POST['type'].' 
                                     WHERE email LIKE "'.$_POST['email'].'"');
             $query2->execute();
-
-            $donnees = $query2->fetch();
-            $_SESSION['donnees'] = $donnees;
-            
             
             header('location: http://localhost:80/projet_web/index.php');
             exit;
