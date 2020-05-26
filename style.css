@@ -2,10 +2,7 @@
     display:inline-block;  
 }
 
-#log_span{
+#button_span{
     float: right ;
 }
 
-#log_in_button{
-    float: right;
-}
