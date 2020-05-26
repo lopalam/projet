@@ -57,8 +57,8 @@ if(isset($_POST['email']) && isset($_POST['mot_de_passe']) && isset($_POST['veri
 
             
             $query2 = $pdo->prepare('SELECT * 
-                                    FROM '.$info['type_de_compte'].' 
-                                    WHERE email LIKE "'.$_POST['identifiant'].'"');
+                                    FROM '.$_POST['type'].' 
+                                    WHERE email LIKE "'.$_POST['email'].'"');
             $query2->execute();
 
             $donnees = $query2->fetch();
@@ -70,7 +70,7 @@ if(isset($_POST['email']) && isset($_POST['mot_de_passe']) && isset($_POST['veri
         };
     };
 };
-header('location: http://localhost:80/tp_emploie/sign_up.html');
+header('location: http://localhost:80/projet_web/sign_up.html');
 exit;
 
 ?>
