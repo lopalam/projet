@@ -13,7 +13,7 @@ session_start();
     <header>
         <span ID="title_span">
             <h1>Titre principal</h1>
-            <h2>Bienvenu <?php $_SESSION['prenom'] ?></h2>
+            <h2>Bienvenu <?php $_SESSION['donnees']['prenom'] ?></h2>
         </span>
         <span ID="log_span">
             <form ID="log_in_button" action="log_in.html"> 
