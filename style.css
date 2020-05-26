@@ -1,0 +1,11 @@
+#title_span{
+    display:inline-block;  
+}
+
+#log_span{
+    float: right ;
+}
+
+#log_in_button{
+    float: right;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>S'enregistrer</title>
+</head>
+
+
+
+<body>
+<span id="enregistrer">
+    <h2>S'enregistrer</h2>
+    <form action="sign_up.php" method="post">
+        <input type="radio" id="patient" name="type" value="patient">
+        <label for="patient">Patient</label>
+        <input type="radio" id="medecin" name="type" value="medecin">
+        <label for="medecin">Medecin</label><br>
+
+        <input type="text" name="email" placeholder="Adresse mail" />
+        <br/>
+        <input type="password" name="mot_de_passe" placeholder="Mot de passe" />
+        <br/>
+        <input type="password" name="verification_mot_de_passe" placeholder="Vérification du mot de passe"/>
+        <br/>
+
+        <button type="submit">S'enregistrer</button>
+    </form>
+</span>
+</body>
+</html>
