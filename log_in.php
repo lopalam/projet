@@ -46,7 +46,8 @@ if(isset($_POST['identifiant']) && isset($_POST['mot_de_passe'])) {
 
         $donnees = $query2->fetch();
         $_SESSION['donnees'] = $donnees;
-        $_SESSION['info'] = $info;
+        $_SESSION['type_'] = $info['type_'];
+        $info = null;
         header('location: http://localhost:80/projet_web/index.php');
         exit;
         
