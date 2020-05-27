@@ -40,13 +40,14 @@ if(isset($_POST['identifiant']) && isset($_POST['mot_de_passe'])) {
         $_SESSION['identifiant'] = $_POST['identifiant'];
 
         $query2 = $pdo->prepare('SELECT * 
-                                FROM '.$info['type_de_compte'].' 
+                                FROM '.$info['type_'].' 
                                 WHERE email LIKE "'.$_POST['identifiant'].'"');
         $query2->execute();
 
         $donnees = $query2->fetch();
         $_SESSION['donnees'] = $donnees;
-        $_SESSION['info'] = $info;
+        $_SESSION['type_'] = $info['type_'];
+        $info = null;
         header('location: http://localhost:80/projet_web/index.php');
         exit;
         
