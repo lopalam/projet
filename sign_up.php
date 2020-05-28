@@ -1,7 +1,7 @@
 <?php
-$database_host = 'localhost';
+$database_host = 'http://90.120.176.23:8080/phpmyadmin/';
 $database_port = '3306';
-$database_dbname = 'projet';
+$database_dbname = 'doctocovidallo';
 $database_user = 'root';
 $database_password = '';
 $database_charset = 'UTF8';
@@ -60,10 +60,6 @@ if(isset($_POST['email']) && isset($_POST['mot_de_passe']) && isset($_POST['veri
                                     FROM '.$_POST['type'].' 
                                     WHERE email LIKE "'.$_POST['email'].'"');
             $query2->execute();
-
-            $donnees = $query2->fetch();
-            $_SESSION['donnees'] = $donnees;
-            
             
             header('location: http://localhost:80/projet_web/index.php');
             exit;
