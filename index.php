@@ -16,14 +16,14 @@ session_start();
         <span ID="title_span">
             <h1>Docto-covid-allo</h1>
             <?php if (isset($_SESSION['IS_CONNECTED'])) {
-                ?><h2>Bienvenu <?php $_SESSION['donnees']['prenom']?> </h2><?php
+                ?><h2>Bienvenue <?php $_SESSION['donnees']['prenom']?> </h2><?php
             }    
             ?>
         </span>
         <span ID="button_span">
             <?php if (isset($_SESSION['IS_CONNECTED'])==false) {
             ?>
-            <form ID="log_in_button" action="log_in.html"> 
+            <form ID="log_in_button" action="log_in.html">
                 <button type="submit">Connexion</button>
             </form>
             <form ID="sign_up_button" action="sign_up.html">
