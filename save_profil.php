@@ -1,6 +1,6 @@
 <?php
 
-$database_host = 'localhost';
+$database_host = 'http://90.120.176.23:8080/phpmyadmin/';
 $database_port = '3306';
 $database_dbname = 'projet';
 $database_user = 'root';
