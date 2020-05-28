@@ -1,7 +1,7 @@
 <?php
 $database_host = 'http://90.120.176.23:8080/phpmyadmin/';
 $database_port = '3306';
-$database_dbname = 'projet';
+$database_dbname = 'doctocovidallo';
 $database_user = 'root';
 $database_password = '';
 $database_charset = 'UTF8';
