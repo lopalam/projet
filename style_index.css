@@ -1,0 +1,8 @@
+.top_nav {
+	display: flex;
+	order: 2;
+}
+
+#doctolib {
+	text-align: left;
+}
