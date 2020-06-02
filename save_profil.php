@@ -64,8 +64,28 @@ if($_POST['email'] != ''){
 
 }
 
-$query2 = $pdo->prepare('SELECT * 
-                        FROM '.$info['type_de_compte'].' 
+if($_POST['adresse'] != ''){
+
+    $query_add = $pdo->prepare('UPDATE ' .$_SESSION['type_de_compte'] .'
+                                SET adresse = :adresse
+                                WHERE adresse LIKE :adresse ;');
+    $query_add->bindParam(':adresse', $_POST['adresse']);
+    $query_add->bindParam(':adresse', $_SESSION['identifiant']);
+    $query_add->execute();
+
+    $query_add = $pdo->prepare('UPDATE compte
+                                SET adresse = :adresse
+                                WHERE adresse LIKE :address ;');
+    $query_add->bindParam(':adresse', $_POST['adresse']);
+    $query_add->bindParam(':address', $_SESSION['identifiant']);
+    $query_add->execute();
+
+
+}
+
+
+$query2 = $pdo->prepare('SELECT *
+                        FROM '.$info['type_de_compte'].'
                         WHERE email LIKE "'.$_POST['identifiant'].'"');
 $query2->execute();
 
