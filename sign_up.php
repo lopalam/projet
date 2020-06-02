@@ -35,7 +35,7 @@ if(isset($_POST['email']) && isset($_POST['mot_de_passe']) && isset($_POST['veri
         if($_POST['mot_de_passe'] == $_POST['verification_mot_de_passe']){
             $mdp = hash('sha256', $_POST['mot_de_passe']);
 
-            $query_info = $pdo->prepare('INSERT INTO compte (id_'.$_POST.', type_de_compte, email, mot_de_passe)
+            $query_info = $pdo->prepare('INSERT INTO compte (id_'.$_POST['type'].', type_de_compte, email, mot_de_passe)
                                         VALUES(:mail, :typ , :mail , :mdp );');
             $query_info->bindParam(':mail', $_POST['email']);
             $query_info->bindParam(':typ', $_POST['type']);
