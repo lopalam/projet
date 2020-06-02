@@ -21,10 +21,6 @@ $pdo = new PDO(
 );
 
 
-?>
-
-
-<?php
 session_start();
 
 if(isset($_POST['identifiant']) && isset($_POST['mot_de_passe'])) {

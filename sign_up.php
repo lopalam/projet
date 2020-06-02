@@ -19,9 +19,6 @@ $pdo = new PDO(
     $database_password,
     $database_options
 );
-?>
-
-<?php
 
 if(isset($_POST['email']) && isset($_POST['mot_de_passe']) && isset($_POST['verification_mot_de_passe']) && isset($_POST['type'])) {
 
