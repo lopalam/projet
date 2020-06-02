@@ -29,7 +29,7 @@ session_start();
 
 if(isset($_POST['identifiant']) && isset($_POST['mot_de_passe'])) {
 
-    $query = $pdo->prepare('SELECT mot_de_passe, type_
+    $query = $pdo->prepare('SELECT mot_de_passe, type_de_compte
                             FROM compte
                             WHERE email LIKE "'.$_POST['identifiant'].'"');
     $query->execute();
@@ -40,13 +40,13 @@ if(isset($_POST['identifiant']) && isset($_POST['mot_de_passe'])) {
         $_SESSION['identifiant'] = $_POST['identifiant'];
 
         $query2 = $pdo->prepare('SELECT * 
-                                FROM '.$info['type_'].' 
+                                FROM '.$info['type_de_compte'].' 
                                 WHERE email LIKE "'.$_POST['identifiant'].'"');
         $query2->execute();
 
         $donnees = $query2->fetch();
         $_SESSION['donnees'] = $donnees;
-        $_SESSION['type_'] = $info['type_'];
+        $_SESSION['type_de_compte'] = $info['type_de_compte'];
         $info = null;
         header('location: http://localhost:8080/projet/index.php');
         exit;
