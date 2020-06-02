@@ -1,6 +1,6 @@
 <?php
 
-$database_host = 'http://localhost:8080/projet/';
+$database_host = '127.0.0.1';
 $database_port = '3306';
 $database_dbname = 'projet';
 $database_user = 'root';
