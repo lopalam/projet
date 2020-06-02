@@ -44,12 +44,12 @@ if(isset($_POST['identifiant']) && isset($_POST['mot_de_passe'])) {
         $_SESSION['donnees'] = $donnees;
         $_SESSION['type_de_compte'] = $info['type_de_compte'];
         $info = null;
-        header('location: http://localhost:8080/projet/index.php');
+        header('location: http://90.120.176.23:8080/projet/index.php');
         exit;
         
     }
 }
-header('location: http://localhost:8080/projet/log_in.html');
+header('location: http://90.120.176.23:8080/projet/log_in.html');
 exit;
 
 ?>

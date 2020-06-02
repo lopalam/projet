@@ -84,7 +84,7 @@ $query2->execute();
 $donnees = $query2->fetch();
 $_SESSION['donnees'] = $donnees;
 
-header('location: http://localhost:8080/projet/index.php');
+header('location: http://90.120.176.23:8080/projet/index.php');
 exit;
 
 ?>
