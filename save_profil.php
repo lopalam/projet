@@ -77,8 +77,8 @@ if($_POST['adresse'] != ''){
 
 
 $query2 = $pdo->prepare('SELECT *
-                        FROM '.$info['type_de_compte'].'
-                        WHERE email LIKE "'.$_POST['identifiant'].'"');
+                        FROM '.$_SESSION['type_de_compte'].'
+                        WHERE email LIKE "'.$_SESSION['identifiant'].'"');
 $query2->execute();
 
 $donnees = $query2->fetch();
