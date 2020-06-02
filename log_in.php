@@ -1,7 +1,7 @@
 <?php
-$database_host = 'http://90.120.176.23:8080/phpmyadmin/';
+$database_host = 'http://localhost:8080/';
 $database_port = '3306';
-$database_dbname = 'projet';
+$database_dbname = 'doctocovidallo';
 $database_user = 'root';
 $database_password = '';
 $database_charset = 'UTF8';
@@ -48,12 +48,12 @@ if(isset($_POST['identifiant']) && isset($_POST['mot_de_passe'])) {
         $_SESSION['donnees'] = $donnees;
         $_SESSION['type_'] = $info['type_'];
         $info = null;
-        header('location: http://localhost:80/projet_web/index.php');
+        header('location: http://localhost:8080/projet/index.php');
         exit;
         
     }
 }
-header('location: http://localhost:80/projet_web/log_in.html');
+header('location: http://localhost:8080/projet/log_in.html');
 exit;
 
 ?>

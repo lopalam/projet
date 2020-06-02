@@ -1,5 +1,5 @@
 <?php
-$database_host = 'http://90.120.176.23:8080/phpmyadmin/';
+$database_host = 'http://localhost:8080/projet/';
 $database_port = '3306';
 $database_dbname = 'doctocovidallo';
 $database_user = 'root';
@@ -61,12 +61,12 @@ if(isset($_POST['email']) && isset($_POST['mot_de_passe']) && isset($_POST['veri
                                     WHERE email LIKE "'.$_POST['email'].'"');
             $query2->execute();
             
-            header('location: http://localhost:80/projet_web/index.php');
+            header('location: http://localhost:8080/projet/index.php');
             exit;
         };
     };
 };
-header('location: http://localhost:80/projet_web/sign_up.html');
+header('location: http://localhost:8080/projet/sign_up.html');
 exit;
 
 ?>

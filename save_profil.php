@@ -1,6 +1,6 @@
 <?php
 
-$database_host = 'http://90.120.176.23:8080/phpmyadmin/';
+$database_host = 'http://localhost:8080/projet/';
 $database_port = '3306';
 $database_dbname = 'projet';
 $database_user = 'root';
@@ -69,7 +69,7 @@ if($_POST['email'] != ''){
 }
 
 
-header('location: http://localhost:80/projet_web/index.php');
+header('location: http://localhost:8080/projet/index.php');
 exit;
 
 ?>
