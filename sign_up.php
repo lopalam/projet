@@ -1,5 +1,5 @@
 <?php
-$database_host = 'http://127.0.0.1';
+$database_host = '127.0.0.1';
 $database_port = '3306';
 $database_dbname = 'doctocovidallo';
 $database_user = 'root';
