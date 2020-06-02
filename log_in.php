@@ -1,5 +1,5 @@
 <?php
-$database_host = 'http://localhost:8080/';
+$database_host = 'http://localhost/';
 $database_port = '3306';
 $database_dbname = 'doctocovidallo';
 $database_user = 'root';
