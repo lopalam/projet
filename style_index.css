@@ -1,8 +1,14 @@
-.top_nav {
+.header {
 	display: flex;
 	order: 2;
 }
 
 #docto-covid-allo {
 	text-align: left;
+	font-size: 40pt;
+	color: red;
+}
+
+#research_doctor{
+	align-items: center;
 }

@@ -38,8 +38,8 @@ if(isset($_POST['email']) && isset($_POST['mot_de_passe']) && isset($_POST['veri
         if($_POST['mot_de_passe'] == $_POST['verification_mot_de_passe']){
             $mdp = hash('sha256', $_POST['mot_de_passe']);
 
-            $query_info = $pdo->prepare('INSERT INTO compte (type_de_compte, email, mot_de_passe)
-                                        VALUES(:typ , :mail , :mdp );');
+            $query_info = $pdo->prepare('INSERT INTO compte (id_'.$_POST.', type_de_compte, email, mot_de_passe)
+                                        VALUES(:mail, :typ , :mail , :mdp );');
             $query_info->bindParam(':mail', $_POST['email']);
             $query_info->bindParam(':typ', $_POST['type']);
             $query_info->bindParam(':mdp', $mdp);
@@ -47,18 +47,12 @@ if(isset($_POST['email']) && isset($_POST['mot_de_passe']) && isset($_POST['veri
 
             $query_info->execute();
 
-            $query_perso = $pdo->prepare('INSERT INTO ' .$_POST['type']. ' (email)
-                                        VALUES(:mail);');
+            $query_perso = $pdo->prepare('INSERT INTO ' .$_POST['type']. ' (email, id)
+                                        VALUES(:mail, :mail);');
             $query_perso->bindParam(':mail', $_POST['email']);
 
 
             $query_perso->execute();
-
-            
-            $query2 = $pdo->prepare('SELECT * 
-                                    FROM '.$_POST['type'].' 
-                                    WHERE email LIKE "'.$_POST['email'].'"');
-            $query2->execute();
             
             header('location: http://localhost:8080/projet/index.php');
             exit;
