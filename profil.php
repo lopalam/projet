@@ -26,6 +26,7 @@ session_start();
             <li> Prénom (<?php print_r($_SESSION['donnees']['prenom']) ?>):  <input type="text" name="prenom" placeholder="Nouveau prénom" /> </li>
             <li> Nom (<?php print_r($_SESSION['donnees']['nom']) ?>):  <input type="text" name="nom" placeholder="Nouveau nom" /> </li>
             <li> Email (<?php print_r($_SESSION['donnees']['email']) ?>):  <input type="text" name="email" placeholder="Nouvelle adresse mail" /> </li>
+            <li> Adresse (<?php print_r($_SESSION['donnees']['adresse']) ?>):  <input type="text" name="adresse" placeholder="Nouvelle Adresse postale" /> </li>
 
         </ul>
         </form>
