@@ -22,7 +22,6 @@ $pdo = new PDO(
 ?>
 
 <?php
-session_start();
 
 if(isset($_POST['email']) && isset($_POST['mot_de_passe']) && isset($_POST['verification_mot_de_passe']) && isset($_POST['type'])) {
 
