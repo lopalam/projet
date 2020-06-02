@@ -32,7 +32,6 @@ if($_POST['prenom'] != ''){
     $query_add->bindParam(':prenom', $_POST['prenom']);
     $query_add->bindParam(':mail', $_SESSION['identifiant']);
     $query_add->execute();
-    $_SESSION['donnees']['prenom'] = $_POST['prenom'];
 }
 
 if($_POST['nom'] != ''){
@@ -43,8 +42,6 @@ if($_POST['nom'] != ''){
     $query_add->bindParam(':nom', $_POST['nom']);
     $query_add->bindParam(':mail', $_SESSION['identifiant']);
     $query_add->execute();
-    $_SESSION['donnees']['nom'] = $_POST['nom'];
-
 
 }
 
@@ -63,11 +60,17 @@ if($_POST['email'] != ''){
     $query_add->bindParam(':email', $_POST['email']);
     $query_add->bindParam(':mail', $_SESSION['identifiant']);
     $query_add->execute();
-    $_SESSION['donnees']['email'] = $_POST['email'];
 
 
 }
 
+$query2 = $pdo->prepare('SELECT * 
+                        FROM '.$info['type_de_compte'].' 
+                        WHERE email LIKE "'.$_POST['identifiant'].'"');
+$query2->execute();
+
+$donnees = $query2->fetch();
+$_SESSION['donnees'] = $donnees;
 
 header('location: http://localhost:8080/projet/index.php');
 exit;
