@@ -3,15 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Connexion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
 </head>
 <body>
-    <h2>Connexion</h2>
-    <form action="log_in.php" method="post">
-        <input type="text" name="identifiant" placeholder="Identifiant" />
-        <br/>
-        <input type="password" name="mot_de_passe" placeholder="Mot de passe" />
-        <br/>
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+    <form action="log_in.php" method="post" class="login100-form validate-form p-l-55 p-r-55 p-t-178">
+    <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
+        <input class="input100" type="text" name="identifiant" placeholder="Identifiant" />
+        <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate = "Please enter password">
+
+            <input type="password" name="mot_de_passe" placeholder="Mot de passe" />
+            <span class="focus-input100"></span>
+        </div>
+
         <button type="submit">Connexion</button>
-    </form> 
+    </form>
+    </div>
+    </div>
 </body>
 </html>
