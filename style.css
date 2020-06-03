@@ -22,12 +22,6 @@ body {
     height: 100%;
 }
 
-.square:after {
-    content: "";
-    display: block;
-    padding-bottom: 50%;
-}
-
 #title_span {
     display: inline-block;
 }

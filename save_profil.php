@@ -75,6 +75,17 @@ if($_POST['adresse'] != ''){
 
 }
 
+if($_POST['code_postal'] != ''){
+
+    $query_add = $pdo->prepare('UPDATE ' .$_SESSION['type_de_compte'] .'
+                                SET code_postal = :code_postal
+                                WHERE email LIKE :mail ;');
+    $query_add->bindParam(':code_postal', $_POST['code_postal']);
+    $query_add->bindParam(':mail', $_SESSION['identifiant']);
+    $query_add->execute();
+
+}
+
 
 $query2 = $pdo->prepare('SELECT *
                         FROM '.$_SESSION['type_de_compte'].'
