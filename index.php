@@ -1,5 +1,10 @@
 <?php
 session_start();
+if (isset($_SESSION['IS_CONNECTED']) == false) {
+    header('location: http://90.120.176.23:8080/projet/index.html');
+    exit;
+}
+
 ?>
 
 <!DOCTYPE html>
