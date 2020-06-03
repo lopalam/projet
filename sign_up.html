@@ -14,8 +14,7 @@
     <div class="limiter">
 
 		<div class="container-login100">
-            <h2>S'enregistrer</h2>
-            <div class="Site_name">
+            <div class="Site_name" >
                 DOCTO-COVID-ALLO
             </div>
 
@@ -23,28 +22,35 @@
 
                 <form action="sign_up.php" method="post"method="post" class="login100-form validate-form p-l-55 p-r-55 p-t-178">
 
-                    <input type="radio" id="patient" name="type" value="patient">
-                    <label for="patient">Patient</label>
-                    <input type="radio" id="medecin" name="type" value="medecin">
-                    <label for="medecin">Medecin</label><br>
+                    <h2 class="senregistrer">S'enregistrer</h2>
 
-                    <div class="wrap-input100 validate-input m-b-16" data-validate="Identifiant manquant">
-                        <input class="input100" type="text" name="email" placeholder="Adresse mail" />
-                        <span class="focus-input100"></span>
+                    <div class = "radio-container">
+                        <input type="radio" id="patient" name="type" value="patient">
+                        <label for="patient">Patient</label>
+
+                        <input type="radio" id="medecin" name="type" value="medecin">
+                        <label for="medecin">Medecin</label><br>
                     </div>
 
-                    <div class="wrap-input100 validate-input m-b-16" data-validate = "Mot de passe manquant">
-                        <input class="input100" type="password" name="mot_de_passe" placeholder="Mot de passe" />
-                        <span class="focus-input100"></span>
-                    </div>
+                    <div class="written-form">
+                        <div class="wrap-input100 validate-input m-b-16" data-validate="Identifiant manquant">
+                            <input class="input100" type="text" name="email" placeholder="Adresse mail" />
+                            <span class="focus-input100"></span>
+                        </div>
 
-                    <div class="wrap-input100 validate-input m-b-16" data-validate = "Mot de passe manquant">
-                        <input class="input100" type="password" name="verification_mot_de_passe" placeholder="Vérification du mot de passe"/>
-                        <span class="focus-input100"></span>
-                    </div>
+                        <div class="wrap-input100 validate-input m-b-16" data-validate = "Mot de passe manquant">
+                            <input class="input100" type="password" name="mot_de_passe" placeholder="Mot de passe" />
+                            <span class="focus-input100"></span>
+                        </div>
 
-                    <div class="container-login100-form-btn">
-                        <button class="login100-form-btn" type="submit">S'enregistrer</button>
+                        <div class="wrap-input100 validate-input m-b-16" data-validate = "Mot de passe manquant">
+                            <input class="input100" type="password" name="verification_mot_de_passe" placeholder="Vérification du mot de passe"/>
+                            <span class="focus-input100"></span>
+                        </div>
+
+                        <div class="container-login100-form-btn">
+                            <button class="login100-form-btn" type="submit">S'enregistrer</button>
+                        </div>
                     </div>
                 </form>
             </div>
