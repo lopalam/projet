@@ -63,7 +63,7 @@ if(isset($_POST['email']) && isset($_POST['mot_de_passe']) && isset($_POST['veri
                                             SET id_'.$_POST['type'].' = :id,
                                             WHERE mail = :mail ;')
             $query_id_add->bindParam(':id', $id);
-            $query_id->bindParam(':mail', $_POST['email']);
+            $query_id_add->bindParam(':mail', $_POST['email']);
             $query_id_add->execute();
             
             header('location: http://90.120.176.23:8080/projet/index.php');
