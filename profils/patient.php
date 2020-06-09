@@ -19,7 +19,7 @@ session_start();
         <hr>
     </header>
     <span>
-        <form action="save_profil.php" method="post">
+        <form action="save_profil_patient.php" method="post">
         <button type="submit">Sauvegarder</button>
 
         <ul class="profil">
