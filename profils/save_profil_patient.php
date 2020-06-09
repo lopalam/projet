@@ -24,7 +24,7 @@ $pdo = new PDO(
 session_start();
 
 
-if(not empty($_POST['prenom'])){
+if($_POST['prenom'] != ''){
 
     $query_add = $pdo->prepare('UPDATE ' .$_SESSION['type_de_compte'] .'
                                 SET prenom = :prenom
@@ -34,7 +34,7 @@ if(not empty($_POST['prenom'])){
     $query_add->execute();
 }
 
-if(not empty($_POST['nom'])){
+if($_POST['nom'] != ''){
 
     $query_add = $pdo->prepare('UPDATE ' .$_SESSION['type_de_compte'] .'
                                 SET nom = :nom
@@ -46,7 +46,7 @@ if(not empty($_POST['nom'])){
 }
 
 
-if(not empty($_POST['adresse'])){
+if($_POST['adresse'] != ''){
 
     $query_add = $pdo->prepare('UPDATE ' .$_SESSION['type_de_compte'] .'
                                 SET adresse = :adresse
@@ -57,7 +57,7 @@ if(not empty($_POST['adresse'])){
 
 }
 
-if(not empty($_POST['code_postal'])){
+if($_POST['code_postal'] != ''){
 
     $query_add = $pdo->prepare('UPDATE ' .$_SESSION['type_de_compte'] .'
                                 SET code_postal = :code_postal
@@ -68,7 +68,7 @@ if(not empty($_POST['code_postal'])){
 
 }
 
-if(not empty($_POST['anniversaire'])){
+if($_POST['anniversaire'] != ''){
 
     $query_add = $pdo->prepare('UPDATE ' .$_SESSION['type_de_compte'] .'
                                 SET date_naissance = :anniversaire
@@ -79,7 +79,7 @@ if(not empty($_POST['anniversaire'])){
 
 }
 
-if(not empty($_POST['genre'])){
+if($_POST['genre'] != ''){
 
     $query_add = $pdo->prepare('UPDATE ' .$_SESSION['type_de_compte'] .'
                                 SET genre = :genre
@@ -90,7 +90,7 @@ if(not empty($_POST['genre'])){
 
 }
 
-if(not empty($_POST['email'])){
+if($_POST['email'] != ''){
 
     $query_add = $pdo->prepare('UPDATE ' .$_SESSION['type_de_compte'] .'
                                 SET email = :email
