@@ -22,7 +22,7 @@ if (isset($_SESSION['IS_CONNECTED']) == false) {
             <h1>Docto-covid-allo</h1>
             <?php if (isset($_SESSION['IS_CONNECTED'])) {
                 ?><h2>Bienvenue <?php $_SESSION['donnees']['prenom']?> </h2><?php
-            }    
+            };    
             ?>
         </span>
         <span ID="button_span">
@@ -31,17 +31,18 @@ if (isset($_SESSION['IS_CONNECTED']) == false) {
                 <button type="submit">Déconnexion</button>
             </form>
             <?php if ($_SESSION['type_de_compte'] == 'patient'){ ?>
-            <form ID="profile_button" action="profil/patient.php">
+            <form ID="profile_button" action="profils/patient.php">
                 <button type="submit">Modifier votre profil</button>
             </form>
             <?php
-            } if($_SESSION['type_de_compte'] == 'medecin') {   
+            } ;
+            if($_SESSION['type_de_compte'] == 'medecin') {   
             ?>
-            <form ID="profile_button" action="profil/medecin.php">
+            <form ID="profile_button" action="profils/medecin.php">
                 <button type="submit">Modifier votre profil</button>
             </form>
             <?php
-            }
+            };
             ?>
         </span>
         <hr>
