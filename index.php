@@ -42,7 +42,7 @@ if (isset($_SESSION['IS_CONNECTED']) == false) {
             <form ID="log_out_button" action="log_out.php">
                 <button type="submit">Déconnexion</button>
             </form>
-            <form ID="profile_button" action="profil/<?php'.$_SESSION['type_de_compte'].'?>.php">
+            <form ID="profile_button" action="profil/'<?php.$_SESSION['type_de_compte'].?>'.php">
                 <button type="submit">Modifier votre profil</button>
             </form>
             <?php
