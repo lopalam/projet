@@ -31,10 +31,10 @@ session_start();
             <li> Code Postal(<?php print_r($_SESSION['donnees']['code_postal']) ?>):  <input type="text" name="code_postal" placeholder="Code Postal" /> </li>
             <li> Genre (<?php print_r($_SESSION['donnees']['genre']) ?>):
                         <input type="radio" id="femme" name="genre" value="femme">
-                        <label for="femme">Femme</label>
+                            <label for="femme">Femme</label>
 
                         <input type="radio" id="homme" name="genre" value="homme">
-                        <label for="homme">Homme</label> </li>
+                            <label for="homme">Homme</label> </li>
 
         </ul>
         </form>
