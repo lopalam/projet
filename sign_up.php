@@ -59,9 +59,9 @@ if(isset($_POST['email']) && isset($_POST['mot_de_passe']) && isset($_POST['veri
             $query_id->execute();
             $id = $query_id->fetch();
 
-            $query_id_add = $pdo->prepare("UPDATE compte
+            $query_id_add = $pdo->prepare('UPDATE compte
                                             SET id_'.$_POST['type'].' = :id,
-                                            WHERE mail = :mail ;")
+                                            WHERE mail = :mail ;')
             $query_id_add->bindParam(':id', $id);
             $query_id->bindParam(':mail', $_POST['email']);
             $query_id_add->execute();
