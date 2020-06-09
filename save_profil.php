@@ -24,7 +24,7 @@ $pdo = new PDO(
 session_start();
 
 
-if($_POST['prenom'] != ''){
+if(not empty($_POST['prenom'])){
 
     $query_add = $pdo->prepare('UPDATE ' .$_SESSION['type_de_compte'] .'
                                 SET prenom = :prenom
@@ -34,7 +34,7 @@ if($_POST['prenom'] != ''){
     $query_add->execute();
 }
 
-if($_POST['nom'] != ''){
+if(not empty($_POST['nom'])){
 
     $query_add = $pdo->prepare('UPDATE ' .$_SESSION['type_de_compte'] .'
                                 SET nom = :nom
@@ -45,7 +45,52 @@ if($_POST['nom'] != ''){
 
 }
 
-if($_POST['email'] != ''){
+
+if(not empty($_POST['adresse'])){
+
+    $query_add = $pdo->prepare('UPDATE ' .$_SESSION['type_de_compte'] .'
+                                SET adresse = :adresse
+                                WHERE email LIKE :mail ;');
+    $query_add->bindParam(':adresse', $_POST['adresse']);
+    $query_add->bindParam(':mail', $_SESSION['identifiant']);
+    $query_add->execute();
+
+}
+
+if(not empty($_POST['code_postal'])){
+
+    $query_add = $pdo->prepare('UPDATE ' .$_SESSION['type_de_compte'] .'
+                                SET code_postal = :code_postal
+                                WHERE email LIKE :mail ;');
+    $query_add->bindParam(':code_postal', $_POST['code_postal']);
+    $query_add->bindParam(':mail', $_SESSION['identifiant']);
+    $query_add->execute();
+
+}
+
+if(not empty($_POST['anniversaire'])){
+
+    $query_add = $pdo->prepare('UPDATE ' .$_SESSION['type_de_compte'] .'
+                                SET date_naissance = :anniversaire
+                                WHERE email LIKE :mail ;');
+    $query_add->bindParam(':anniversaire', $_POST['anniversaire']);
+    $query_add->bindParam(':mail', $_SESSION['identifiant']);
+    $query_add->execute();
+
+}
+
+if(not empty($_POST['genre'])){
+
+    $query_add = $pdo->prepare('UPDATE ' .$_SESSION['type_de_compte'] .'
+                                SET genre = :genre
+                                WHERE email LIKE :mail ;');
+    $query_add->bindParam(':genre', $_POST['genre']);
+    $query_add->bindParam(':mail', $_SESSION['identifiant']);
+    $query_add->execute();
+
+}
+
+if(not empty($_POST['email'])){
 
     $query_add = $pdo->prepare('UPDATE ' .$_SESSION['type_de_compte'] .'
                                 SET email = :email
@@ -60,30 +105,6 @@ if($_POST['email'] != ''){
     $query_add->bindParam(':email', $_POST['email']);
     $query_add->bindParam(':mail', $_SESSION['identifiant']);
     $query_add->execute();
-
-
-}
-
-if($_POST['adresse'] != ''){
-
-    $query_add = $pdo->prepare('UPDATE ' .$_SESSION['type_de_compte'] .'
-                                SET adresse = :adresse
-                                WHERE email LIKE :mail ;');
-    $query_add->bindParam(':adresse', $_POST['adresse']);
-    $query_add->bindParam(':mail', $_SESSION['identifiant']);
-    $query_add->execute();
-
-}
-
-if($_POST['code_postal'] != ''){
-
-    $query_add = $pdo->prepare('UPDATE ' .$_SESSION['type_de_compte'] .'
-                                SET code_postal = :code_postal
-                                WHERE email LIKE :mail ;');
-    $query_add->bindParam(':code_postal', $_POST['code_postal']);
-    $query_add->bindParam(':mail', $_SESSION['identifiant']);
-    $query_add->execute();
-
 }
 
 
