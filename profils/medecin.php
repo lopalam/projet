@@ -13,7 +13,7 @@ session_start();
         <span ID="title_span">
             <h1>Docto-covid-allo</h1>
         </span>
-        <form ID="home_button" action="/../index.php"> 
+        <form ID="home_button" action="http://90.120.176.23:8080/projet/index.php"> 
             <button type="submit">Accueil</button>
         </form>
         <hr>
