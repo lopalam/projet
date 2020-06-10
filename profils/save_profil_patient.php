@@ -79,7 +79,7 @@ if($_POST['anniversaire'] != ''){
 
 }
 
-if($_POST['genre'] != null){
+if( empty($_POST['genre']) == false){
 
     $query_add = $pdo->prepare('UPDATE ' .$_SESSION['type_de_compte'] .'
                                 SET genre = :genre
