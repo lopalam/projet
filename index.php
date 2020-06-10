@@ -12,7 +12,7 @@ if (isset($_SESSION['IS_CONNECTED']) == false) {
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <title>Accueil</title>
 </head>
 
@@ -22,7 +22,7 @@ if (isset($_SESSION['IS_CONNECTED']) == false) {
             <h1>Docto-covid-allo</h1>
             <?php if (isset($_SESSION['IS_CONNECTED'])) {
                 ?><h2>Bienvenue <?php $_SESSION['donnees']['prenom']?> </h2><?php
-            };    
+            }
             ?>
         </span>
         <span ID="button_span">
@@ -31,23 +31,32 @@ if (isset($_SESSION['IS_CONNECTED']) == false) {
                 <button type="submit">Déconnexion</button>
             </form>
             <?php if ($_SESSION['type_de_compte'] == 'patient'){ ?>
-            <form ID="profile_button" action="profils/patient.php">
+            <form ID="profile_button" action="profil/patient.php">
                 <button type="submit">Modifier votre profil</button>
             </form>
             <?php
-            } ;
-            if($_SESSION['type_de_compte'] == 'medecin') {   
+            } if($_SESSION['type_de_compte'] == 'medecin') {
             ?>
-            <form ID="profile_button" action="profils/medecin.php">
+            <form ID="profile_button" action="profil/medecin.php">
                 <button type="submit">Modifier votre profil</button>
             </form>
             <?php
-            };
+            }
             ?>
         </span>
-        <hr>
     </header>
 
+	<div id="info_covid">
+		<form action="http://90.120.176.23:8080/projet/covid.html">
+			<input type="submit" value="Informations Covid-19" />
+		</form>
+	</div>
+
+    <div id="research_doctor">
+		<input class="searchbar-input-doctor" placeholder="Médecin, établissement..." value="">
+		<input class="searchbar-input-place" placeholder="Lieu" value="">
+		<button type="button">Rechercher</button>
+	</div>
 </body>
 
 </html>
