@@ -53,9 +53,11 @@ if (isset($_SESSION['IS_CONNECTED']) == false) {
 	</div>
 
     <div id="research_doctor">
+        <form action="resrarch_medecin.php" method="post">
 		<input class="searchbar-input-doctor" placeholder="Médecin, établissement..." value="">
 		<input class="searchbar-input-place" placeholder="Lieu" value="">
-		<button type="button">Rechercher</button>
+        <button type="submit">Rechercher</button>
+        </form>
 	</div>
 </body>
 
