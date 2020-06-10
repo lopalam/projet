@@ -51,7 +51,7 @@ if(isset($_POST['email']) && isset($_POST['mot_de_passe']) && isset($_POST['veri
 
             $query_perso->execute();
 
-            $query_id = $pdo->prepare('SELECT id
+            /*$query_id = $pdo->prepare('SELECT id
                                         FROM ' .$_POST['type']. '
                                         WHERE email = :mail');
             $query_id->bindParam(':mail', $_POST['email']);
@@ -65,7 +65,7 @@ if(isset($_POST['email']) && isset($_POST['mot_de_passe']) && isset($_POST['veri
             $query_id_add->bindParam(':id', $id['id']);
             $query_id_add->bindParam(':mail', $_POST['email']);
             $query_id_add->execute();
-            
+            */
             header('location: http://90.120.176.23:8080/projet/index.php');
             exit;
         };
