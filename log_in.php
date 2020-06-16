@@ -24,30 +24,31 @@ $pdo = new PDO(
 session_start();
 
 if(isset($_POST['identifiant']) && isset($_POST['mot_de_passe'])) {
-
-    $query = $pdo->prepare('SELECT mot_de_passe, type_de_compte
-                            FROM compte
-                            WHERE email LIKE "'.$_POST['identifiant'].'"');
-    $query->execute();
-
-    $info = $query->fetch();
-    if(hash('sha256', $_POST['mot_de_passe']) == $info['mot_de_passe']){
-        $_SESSION['IS_CONNECTED'] = true;
-        $_SESSION['identifiant'] = $_POST['identifiant'];
-
-        $query2 = $pdo->prepare('SELECT * 
-                                FROM '.$info['type_de_compte'].' 
+    try {
+        $query = $pdo->prepare('SELECT mot_de_passe, type_de_compte
+                                FROM compte
                                 WHERE email LIKE "'.$_POST['identifiant'].'"');
-        $query2->execute();
+        $query->execute();
 
-        $donnees = $query2->fetch();
-        $_SESSION['donnees'] = $donnees;
-        $_SESSION['type_de_compte'] = $info['type_de_compte'];
-        $info = null;
-        header('location: http://90.120.176.23:8080/projet/index.php');
-        exit;
+        $info = $query->fetch();
+        if(hash('sha256', $_POST['mot_de_passe']) == $info['mot_de_passe']){
+            $_SESSION['IS_CONNECTED'] = true;
+            $_SESSION['identifiant'] = $_POST['identifiant'];
+
+            $query2 = $pdo->prepare('SELECT * 
+                                    FROM '.$info['type_de_compte'].' 
+                                    WHERE email LIKE "'.$_POST['identifiant'].'"');
+            $query2->execute();
+
+            $donnees = $query2->fetch();
+            $_SESSION['donnees'] = $donnees;
+            $_SESSION['type_de_compte'] = $info['type_de_compte'];
+            $info = null;
+            header('location: http://90.120.176.23:8080/projet/index.php');
+            exit;
+        };
         
-    }
+    };
 } else {
     header('location: http://90.120.176.23:8080/projet/log_in.html');
     exit;
