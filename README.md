@@ -9,7 +9,7 @@ Docto-Covid-Allo est une plateforme qui permet de mettre en relation les patient
 
 ### Fonctionnement
 
-![](https://image.noelshack.com/fichiers/2020/25/2/1592342671-drawio.png)
+![](https://image.noelshack.com/fichiers/2020/25/3/1592347681-drawio.png)
 
 
 
@@ -24,6 +24,7 @@ Docto-Covid-Allo est une plateforme qui permet de mettre en relation les patient
 - [XAMPP](https://www.apachefriends.org/index.html)
 - La base de données téléchargeable [ici](https://drive.google.com/file/d/1kqo_8kQHkUkhxAv29yKWJE508t7wgben/view?usp=sharing)
 - l'ensemble des fichiers constituant le site et qui permettent sa navigation disponible [ici](https://github.com/lopalam/projet)
+- [NodeJS]()
 - Du courage
 
 ### Processus d'installation:
@@ -45,3 +46,11 @@ Docto-Covid-Allo est une plateforme qui permet de mettre en relation les patient
     Se rendre sur `http://localhost:8080/phpmyadmin` et 
     
 ## Utilisation
+
+
+A RAJOUTER:
+
+DANS: 
+- Comment lancer xampp 
+- Utilisation: se rendre sur localhost dans navigateur
+- comment lancer le serveur nodejs (il suffit de navig
