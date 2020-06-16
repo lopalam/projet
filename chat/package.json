@@ -1,0 +1,29 @@
+{
+    "name": "docto-chat",
+    "version": "1.0.0",
+    "description": "Socket.io and Node.js chat doctor-patient (or basically user to user)",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/RebornX10/chat-nodejs.git"
+    },
+    "keywords": [
+        "chat",
+        "real",
+        "time",
+        "socket.io"
+    ],
+    "author": "Samuel ADONE",
+    "license": "Creative Common, I guess?",
+    "bugs": {
+        "url": "https://github.com/RebornX10/chat-nodejs/issues"
+    },
+    "homepage": "https://github.com/RebornX10/chat-nodejs#readme",
+    "dependencies": {
+        "server": "^1.0.0-beta.2"
+    }
+}
