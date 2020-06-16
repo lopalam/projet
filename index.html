@@ -10,16 +10,14 @@
 	<div class="header">
         <h1 id="docto-covid-allo">Docto-Covid-Allo</h1>
 	</div>
-
-	<div id="research_doctor">
-        <form action="resrarch_medecin.php" method="post">
-			<input class="searchbar-input-doctor" placeholder="Médecin, établissement..." value="">
-			<input class="searchbar-input-place" placeholder="Lieu" value="">
-			<button type="submit">Rechercher</button>
-		</form>
+	<div class="search">
+	<form action="search.php" method="GET">
+        <input type="text" name="query" placeholder="Médecin, code postal, specialité..."/>
+        <input type="submit" value="Search" />
+    </form>
 	</div>
 
-	<div id="log_div">
+	<div id="research_doctor">
 		<form action="http://90.120.176.23:8080/projet/log_in.html">
 			<input type="submit" value="Connexion" />
 		</form>
