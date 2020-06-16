@@ -20,8 +20,7 @@ $pdo = new PDO(
     $database_options
 );
 
-if(isset($_POST['email']) && isset($_POST['mot_de_passe']) && isset($_POST['verification_mot_de_passe']) && isset($_POST['type'])) {
-
+if (isset($_POST['email']) && isset($_POST['mot_de_passe']) && isset($_POST['verification_mot_de_passe']) && isset($_POST['type'])) {
     $query = $pdo->prepare('SELECT email FROM ' .$_POST['type']. ' WHERE email LIKE :toto ');
     
     $query->bindParam(':toto', $_POST['email']);
@@ -30,9 +29,8 @@ if(isset($_POST['email']) && isset($_POST['mot_de_passe']) && isset($_POST['veri
 
     $check = $query->fetch();
 
-    if($check == false && strpos($_POST['email'], '@') != false) {
-
-        if($_POST['mot_de_passe'] == $_POST['verification_mot_de_passe']){
+    if ($check == false && strpos($_POST['email'], '@') != false) {
+        if ($_POST['mot_de_passe'] == $_POST['verification_mot_de_passe']) {
             $mdp = hash('sha256', $_POST['mot_de_passe']);
 
             $query_info = $pdo->prepare('INSERT INTO compte (type_de_compte, email, mot_de_passe)
@@ -73,5 +71,3 @@ if(isset($_POST['email']) && isset($_POST['mot_de_passe']) && isset($_POST['veri
 };
 header('location: http://90.120.176.23:8080/projet/sign_up.html');
 exit;
-
-?>

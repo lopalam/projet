@@ -23,7 +23,7 @@ $pdo = new PDO(
 
 session_start();
 
-if(isset($_POST['identifiant']) && isset($_POST['mot_de_passe'])) {
+if (isset($_POST['identifiant']) && isset($_POST['mot_de_passe'])) {
     try {
         $query = $pdo->prepare('SELECT mot_de_passe, type_de_compte
                                 FROM compte
@@ -31,7 +31,7 @@ if(isset($_POST['identifiant']) && isset($_POST['mot_de_passe'])) {
         $query->execute();
 
         $info = $query->fetch();
-        if(hash('sha256', $_POST['mot_de_passe']) == $info['mot_de_passe']){
+        if (hash('sha256', $_POST['mot_de_passe']) == $info['mot_de_passe']) {
             $_SESSION['IS_CONNECTED'] = true;
             $_SESSION['identifiant'] = $_POST['identifiant'];
 
@@ -47,7 +47,6 @@ if(isset($_POST['identifiant']) && isset($_POST['mot_de_passe'])) {
             header('location: http://90.120.176.23:8080/projet/index.php');
             exit;
         };
-        
     } finally {
         header('location: http://90.120.176.23:8080/projet/log_in.html');
         exit;
@@ -56,5 +55,3 @@ if(isset($_POST['identifiant']) && isset($_POST['mot_de_passe'])) {
     header('location: http://90.120.176.23:8080/projet/log_in.html');
     exit;
 };
-
-?>
