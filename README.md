@@ -9,7 +9,7 @@ Docto-Covid-Allo est une plateforme qui permet de mettre en relation les patient
 
 ### Fonctionnement
 
-![](https://image.noelshack.com/fichiers/2020/25/2/1592342671-drawio.png)
+![](https://image.noelshack.com/fichiers/2020/25/3/1592347681-drawio.png)
 
 
 
