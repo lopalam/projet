@@ -1,0 +1,167 @@
+/*//////////////////////////////////////////////////////////////////
+[ FONT ]*/
+
+@font-face {
+    font-family: Ubuntu-Regular;
+    src: url('../fonts/ubuntu/Ubuntu-Regular.ttf');
+}
+
+@font-face {
+    font-family: Ubuntu-Bold;
+    src: url('../fonts/ubuntu/Ubuntu-Bold.ttf');
+}
+
+@font-face {
+    font-family: JosefinSans-Bold;
+    src: url('../fonts/JosefinSans/JosefinSans-Bold.ttf');
+}
+
+
+/*//////////////////////////////////////////////////////////////////
+[ RESTYLE TAG ]*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: Ubuntu-Regular, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+/*-----------------------# TOP BANNER #-----------------------*/
+
+.banner {
+    flex-grow: 10;
+    justify-content: center;
+    font-family: JosefinSans-Bold;
+    font-size: 20px;
+    color: #fff;
+    line-height: 1.2;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #c80000;
+    padding-top: 50px;
+    padding-bottom: 39px;
+}
+
+
+/*------------------------# Interaction zone #----------------*/
+
+.interaction {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+/*fancy*/
+
+.greeting {
+    background: hsl(200, 70, 11);
+    background-size: .12em 100%;
+    font: 16px;
+}
+
+
+/*------------------------# Buttons #-------------------------*/
+
+input {
+    outline: none !important;
+    border: none;
+    background: blanchedalmond;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+iframe {
+    border: none !important;
+}
+
+.search-button {
+    position: relative;
+    padding: 12px 15px;
+    left: 8px;
+    border: 2px solid #ca2020;
+    background-color: #ca2020ce;
+    color: #fafafa;
+}
+
+.search-button:hover {
+    background-color: #ff6767;
+    color: #000000;
+    border: #ff6767 transparentize($color: #ff6767, $amount: 52);
+}
+
+
+/*-----------------------# Search bar #------------------------*/
+
+.limiter {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.search {
+    margin: 20px;
+    padding: 12px 15px;
+    background: rgba(50, 50, 50, 0.2);
+    border: 0px solid #dbdbdb;
+    margin: 50px auto;
+}
+
+.search-bar {
+    height: 30px;
+    width: 250px;
+    // padding: 12px 56px;
+    // color: transparent;
+}
+
+.search-bar input {
+    height: 60px;
+    width: 100px;
+    padding: 12px 56px;
+    color: transparent;
+}
+
+
+/*-------------------# connexion / register #---------------*/
+
+.connexion {
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+    flex-direction: row;
+    background-color: #fff;
+}
+
+.login {
+    padding: 12px 21px;
+    background-color: #ff6767;
+    height: 60px;
+    width: 150px;
+}

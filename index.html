@@ -3,37 +3,51 @@
 <head>
         <meta charset="UTF-8">
         <title>Docto-Covid-Allo</title>
-	 <link rel="stylesheet" href="css/main.css">
+	 <link rel="stylesheet" href="css/style.scss">
 </head>
 
 <body>
-	<div class="header">
+	<div class="banner">
         <h1 id="docto-covid-allo">Docto-Covid-Allo</h1>
 	</div>
-	<div class="search">
-	<form action="search.php" method="GET">
-        <input type="text" name="query" placeholder="Médecin, code postal, specialité..."/>
-        <input type="submit" value="Search" />
-    </form>
-	</div>
 
-	<div id="research_doctor">
-		<form action="http://90.120.176.23:8080/projet/log_in.html">
-			<input type="submit" value="Connexion" />
-		</form>
-		<form action="http://90.120.176.23:8080/projet/sign_up.html?">
-			<input type="submit" value="Inscription" />
-		</form>
-	</div>
+	<div class="interaction">
 
-	<div id="info_covid">
-		<form action="http://90.120.176.23:8080/projet/covid.html">
-			<input type="submit" value="Informations Covid-19" />
-		</form>
-	</div>
+		<div class="greeting">
+			Bienvenue sur Docto-Covid-Allo! Votre Assistant en cas de contamination! Que désirez vous faire?
+		</div>
+		<div class="search">
+		Effectuer une rechercher
+			<form action="search.php" method="GET">
+				<input type="text" name="query" placeholder="Médecin, code postal, specialité..." class="search-bar"/>
+				<input type="submit" value="Search" class="search-button" />
+			</form>
+		</div>
 
-	<div class="chat_access">
-	<a href="chat/public/index.html">Prendre contact avec un médécin</a>
+		<div id="connexion">
+
+			<div class="login">
+				<form action="http://90.120.176.23:8080/projet/log_in.html">
+					<input type="submit" value="Connexion" />
+				</form>
+			</div>
+
+			<div class="signup">
+				<form action="http://90.120.176.23:8080/projet/sign_up.html?">
+					<input type="submit" value="Inscription" />
+				</form>
+			</div>
+		</div>
+
+		<div id="info_covid">
+			<form action="http://90.120.176.23:8080/projet/covid.html">
+				<input type="submit" value="Informations Covid-19" />
+			</form>
+		</div>
+
+		<div class="chat_access">
+		<a href="chat/public/index.html">Prendre contact avec un médécin</a>
+		</div>
 	</div>
 </body>
 </html>
