@@ -83,7 +83,7 @@ html {
 input {
     outline: none !important;
     border: none;
-    background: blanchedalmond;
+    background: none;
 }
 
 button:hover {
@@ -97,10 +97,10 @@ iframe {
 .search-button {
     position: relative;
     padding: 12px 15px;
-    left: 8px;
     border: 2px solid #ca2020;
     background-color: #ca2020ce;
     color: #fafafa;
+    top: -9px;
 }
 
 .search-button:hover {
@@ -111,11 +111,6 @@ iframe {
 
 
 /*-----------------------# Search bar #------------------------*/
-
-.limiter {
-    width: 100%;
-    margin: 0 auto;
-}
 
 .search {
     margin: 20px;
@@ -159,9 +154,13 @@ iframe {
     background-color: #fff;
 }
 
-.login {
-    padding: 12px 21px;
+.login,
+.signup {
+    padding: 15px;
+    padding-bottom: 15px;
     background-color: #ff6767;
-    height: 60px;
-    width: 150px;
+    height: 41px;
+    width: 90px;
+    text-align: center;
+    margin-bottom: 15px;
 }
