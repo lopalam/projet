@@ -59,6 +59,9 @@ if (isset($_SESSION['IS_CONNECTED']) == false) {
         <button type="submit">Rechercher</button>
         </form>
 	</div>
+
+    
 </body>
+
 
 </html>
