@@ -1,53 +1,71 @@
 <?php
-$database_host = '127.0.0.1';
-$database_port = '3306';
-$database_dbname = 'doctocovidallo';
-$database_user = 'root';
-$database_password = '';
-$database_charset = 'UTF8';
-$database_options = [
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-];
-    
-$pdo = new PDO(
-    'mysql:host=' . $database_host .
-    ';port=' . $database_port .
-    ';dbname=' . $database_dbname .
-    ';charset=' . $database_charset,
-    $database_user,
-    $database_password,
-    $database_options
-);
 
-session_start();
+include_once('fix_mysql.inc.php');
 
+mysql_connect("127.0.0.1", "root", "") or die("Error connecting to database: ".mysql_error());
 
-function find_doctor($start, $per_page, $keyword, $ville, $specialite, $mysqli)
-{
-    $start = preg_replace('/[^0-9]/', '', $mysqli->real_escape_string($start));
-    $per_page = preg_replace('/[^0-9]/', '', $mysqli->real_escape_string($per_page));
-    $keyword = $mysqli->real_escape_string(stripslashes($keyword));
-    $ville= $mysqli->real_escape_string(stripslashes($ville));
-
-    /*      $t1 = '';
-           $t2 = '';
-          $t3 = '';
-            $t4 = '';
-            $t5 = '';
-    */
-    $q = "SELECT * FROM `medecin`";
-
-    if ($keyword && !empty($keyword)) {
-        $q .= " AND (`specialite` LIKE '%".$keyword."%' OR `code_postal` LIKE '%".$keyword."%' OR `ville` LIKE '%".$keyword."%')";
-    }
-    //$q .= " AND `p_for`='$prop_for'";
-    if ($ville && !empty($ville)) {
-        $q .= " AND `ville`=".$ville;
-    }
-    if ($specialite && !empty($specialite)) {
-        $q .= " AND `specialite`=".$specialite;
-    }
-}
+mysql_select_db("doctocovidallo") or die(mysql_error());
 
 ?>
+
+<!DOCTYPE html>
+
+<head>
+    <title>Search results</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+
+    <form action="search.php" method="GET">
+        <input type="text" name="query" />
+        <input type="submit" value="Search" />
+    </form>
+    <?php
+    $query = $_GET['query'];
+    // gets value sent over search form
+
+    $min_length = 3;
+    // you can set minimum length of the query if you want
+
+    if(strlen($query) >= $min_length){ // if query length is more or equal minimum length then
+
+        $query = htmlspecialchars($query);
+        // changes characters used in html to their equivalents, for example: < to &gt;
+
+        $query = mysql_real_escape_string($query);
+        // makes sure nobody uses SQL injection
+
+        $raw_results = mysql_query("SELECT * FROM medecin
+            WHERE (`specialite` LIKE '%".$query."%') OR (`nom` LIKE '%".$query."%') OR ('code_postal' LIKE '%".$query."%')") or die(mysql_error());
+
+        // * means that it selects all fields, you can also write: `specialite`, `nom`, `code_postal`
+        // articles is the name of our table
+
+        // '%$query%' is what we're looking for, % means anything, for example if $query is Hello
+        // it will match "hello", "Hello man", "gogohello", if you want exact match use `title`='$query'
+        // or if you want to match just full word so "gogohello" is out use '% $query %' ...OR ... '$query %' ... OR ... '% $query'
+
+        if(mysql_num_rows($raw_results) > 0){ // if one or more rows are returned do following
+
+            while($results = mysql_fetch_array($raw_results)){
+            // $results = mysql_fetch_array($raw_results) puts data from database into array, while it's valid it does the loop
+
+                echo "<p><h3>".$results['nom']."</h3>"."<h4>".$results['specialite']."</h4>"."<h5>".$results['code_postal']."</h5>"."</p>";
+                // posts results gotten from database(title and text) you can also show id ($results['id'])
+            }
+
+        }
+        else{ // if there is no matching rows do following
+            echo "Aucun résultat de résultat";
+        }
+
+    }
+    else{ // if query length is less than minimum
+        echo "Pas assez de lettres/chiffres pour effectuer une recherche, le minimum: ".$min_length;
+    }
+?>
+</body>
+
+</html>
