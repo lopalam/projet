@@ -7,15 +7,15 @@
 ### Description
 Docto-Covid-Allo est une plateforme qui permet de mettre en relation les patients atteint du COVID-19 avec des médecins de diverses spécialisations. Cette maladie apportant beaucoup de complication, il est primordial d'avoir acces à des soins adaptés. 
 
-### Base de données
-
-![](https://i.imgur.com/ZnzMW91.png)
-
-## Fonctionnement
+### Fonctionnement
 
 ![](https://image.noelshack.com/fichiers/2020/25/2/1592342671-drawio.png)
 
-&nbsp;
+
+
+### Base de données
+
+![](https://i.imgur.com/ZnzMW91.png)
 
 ## Installation
 
