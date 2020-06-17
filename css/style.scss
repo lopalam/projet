@@ -34,14 +34,14 @@ html {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    background-image: url(https://i.imgur.com/tNM7zu8.jpg);
+    // background-color: rgb(230, 173, 173);
     background-position: center;
     // background-size: cover;
     opacity: 1;
 }
 
 body {
-    background: rgba(255, 255, 255, .75);
+    background: rgb(255, 255, 255);
 }
 
 
@@ -83,6 +83,10 @@ body {
     background: hsl(200, 70, 11);
     background-size: .12em 100%;
     font: 16px;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    align-items: center;
 }
 
 
