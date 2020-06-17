@@ -12,18 +12,29 @@ if (isset($_SESSION['IS_CONNECTED']) == false) {
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/style.scss">
     <title>Accueil</title>
 </head>
 
 <body>
     <header>
         <span ID="title_span">
-            <h1>Docto-covid-allo</h1>
-            <?php if (isset($_SESSION['IS_CONNECTED'])) {
-    ?><h2>Bienvenue <?php $_SESSION['donnees']['prenom']?> </h2><?php
-}
-            ?>
+        <div class="banner">
+        <h1 id="docto-covid-allo">Docto-Covid-Allo</h1>
+    </div>
+
+	<div class="interaction">
+
+    <div class="greeting">
+        Bienvenue sur Docto-Covid-Allo! Votre Assistant en cas de contamination! Que désirez vous faire?
+    </div>
+            <div class="search">
+		Effectuer une rechercher
+			<form action="search.php" method="GET">
+				<input type="text" name="query" placeholder="Médecin, code postal, specialité..." class="search-bar"/>
+				<input type="submit" value="Search" class="search-button" />
+			</form>
+		</div>
         </span>
         <span ID="button_span">
 
@@ -46,21 +57,12 @@ if (isset($_SESSION['IS_CONNECTED']) == false) {
         </span>
     </header>
 
-	<div id="info_covid">
-		<form action="http://90.120.176.23:8080/projet/covid.html">
-			<input type="submit" value="Informations Covid-19" />
-		</form>
-	</div>
-
-    <div id="research_doctor">
-        <form action="resrarch_medecin.php" method="post">
-		<input class="searchbar-input-doctor" placeholder="Médecin, établissement..." value="">
-		<input class="searchbar-input-place" placeholder="Lieu" value="">
-        <button type="submit">Rechercher</button>
+    <div id="info_covid">
+        <form action="http://90.120.176.23:8080/projet/covid.html">
+            <input type="submit" value="Informations Covid-19" />
         </form>
-	</div>
+    </div>
 
-    
 </body>
 
 
