@@ -200,3 +200,18 @@ table {
     align-items: center;
     flex-direction: column;
 }
+
+.cocovirus {
+    display: block;
+    padding: 15px;
+    padding-bottom: 15px;
+    background-color: #ff6767;
+    height: 41px;
+    width: 150px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.cocovirus:hover {
+    background-color: #ffa0a0;
+}

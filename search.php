@@ -13,7 +13,7 @@ mysql_select_db("doctocovidallo") or die(mysql_error());
 <head>
     <title>Search results</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.scss" />
 </head>
 
 <body>
