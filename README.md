@@ -30,7 +30,7 @@ Docto-Covid-Allo est une plateforme qui permet de mettre en relation les patient
 ### Processus d'installation:
 
 1. **Installer XAMPP**,
-    puis dans XAMPP installé Apache ainsi que MySQL (si les bouttons sont grisés il vous suffit de 
+    puis dans XAMPP installer Apache ainsi que MySQL (si les bouttons sont grisés il vous suffit de 
     lancer XAMPP en tant qu'administrateur / ``sudo``).
     ![](https://i.imgur.com/4y4NiHv.png)
 
