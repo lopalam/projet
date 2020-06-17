@@ -47,10 +47,13 @@ if (isset($_POST['identifiant']) && isset($_POST['mot_de_passe'])) {
             header('location: http://90.120.176.23:8080/projet/index.php');
             exit;
         };
+    }catch (Exception $e){
+        header('location: http://90.120.176.23:8080/projet/log_in.html');
+        exit;
     } finally {
         header('location: http://90.120.176.23:8080/projet/log_in.html');
         exit;
-    }
+    };
 } else {
     header('location: http://90.120.176.23:8080/projet/log_in.html');
     exit;
