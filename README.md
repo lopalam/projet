@@ -45,6 +45,6 @@ Docto-Covid-Allo est une plateforme qui permet de mettre en relation les patient
 ## Utilisation
 ### Lancer le site
 
-Tout d'abord lancer XAMPP, puis cliquer sur les cases `Start`  à droite de **Apache** et **MySQL**
-Puis, lancer son navigateur favori, aller dans la barre d'URL, puis taper `http://localhost:8080/project`
-Enfin, pour lancer le chat, on lance un terminal puis on se rend à la racine du projet puis dans le dossier `chat` et on tape la commande `npm start index.js`
+1. Tout d'abord lancer XAMPP, puis cliquer sur les cases `Start`  à droite de **Apache** et **MySQL**
+2. Puis, lancer son navigateur favori, aller dans la barre d'URL, puis taper `http://localhost:8080/project`
+3. Enfin, pour lancer le chat, on lance un terminal puis on se rend à la racine du projet et dans le dossier `chat` puis on tape la commande `npm install` et on tape la commande `npm start index.js`
