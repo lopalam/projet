@@ -182,3 +182,21 @@ iframe {
 .signup:hover {
     background-color: #ffa0a0;
 }
+
+
+/*------------ # Table for results #-------------------------*/
+
+table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px;
+    border-color: black;
+}
+
+.chat_access {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

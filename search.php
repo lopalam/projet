@@ -52,7 +52,7 @@ mysql_select_db("doctocovidallo") or die(mysql_error());
             while($results = mysql_fetch_array($raw_results)){
             // $results = mysql_fetch_array($raw_results) puts data from database into array, while it's valid it does the loop
 
-                echo "<p><h3>".$results['nom']."</h3>"."<h4>".$results['specialite']."</h4>"."<h5>".$results['code_postal']."</h5>"."</p>";
+                echo "<p><table><th>".$results['nom']."</th>"."<tr><td>".$results['specialite']."</td><td>".$results['code_postal']."</td><td>".$results['adresse']."</td><td>".$results['ville']."</td></p>";
                 // posts results gotten from database(title and text) you can also show id ($results['id'])
             }
 

@@ -63,6 +63,10 @@ if (isset($_SESSION['IS_CONNECTED']) == false) {
         </form>
     </div>
 
+    <div class="chat_access">
+		<a href="chat/public/index.html">Prendre contact avec un médécin</a>
+		</div>
+
 </body>
 
 
