@@ -41,16 +41,10 @@ Docto-Covid-Allo est une plateforme qui permet de mettre en relation les patient
     Les Fichiers téchargés contenant les pages doivent etre décompressés et
     déposé dans ``C:\xampp\htdocs`` (*Windows*) ou ``/opt/lampp/apache2/htdocs`` (*Linux*).
     
-4. **Lancer Apache et MySQL**
-    
-    Se rendre sur `http://localhost:8080/phpmyadmin` et 
     
 ## Utilisation
+### Lancer le site
 
-
-A RAJOUTER:
-
-DANS: 
-- Comment lancer xampp 
-- Utilisation: se rendre sur localhost dans navigateur
-- comment lancer le serveur nodejs (il suffit de navig
+Tout d'abord lancer XAMPP, puis cliquer sur les cases `Start`  à droite de **Apache** et **MySQL**
+Puis, lancer son navigateur favori, aller dans la barre d'URL, puis taper `http://localhost:8080/project`
+Enfin, pour lancer le chat, on lance un terminal puis on se rend à la racine du projet puis dans le dossier `chat` et on tape la commande `npm start index.js`
