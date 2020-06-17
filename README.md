@@ -22,7 +22,7 @@ Docto-Covid-Allo est une plateforme qui permet de mettre en relation les patient
 ### Prérequis
 
 - [XAMPP](https://www.apachefriends.org/index.html)
-- La base de données téléchargeable [ici](https://drive.google.com/file/d/1kqo_8kQHkUkhxAv29yKWJE508t7wgben/view?usp=sharing)
+- La base de données téléchargeable [ici](https://drive.google.com/file/d/1d4X2KJF7YmjitDHZr-BIyiM_JynVTGOa/view)
 - l'ensemble des fichiers constituant le site et qui permettent sa navigation disponible [ici](https://github.com/lopalam/projet)
 - [NodeJS](https://nodejs.org/en/)
 - Du courage
@@ -41,6 +41,9 @@ Docto-Covid-Allo est une plateforme qui permet de mettre en relation les patient
     Les Fichiers téchargés contenant les pages doivent etre décompressés et
     déposé dans ``C:\xampp\htdocs`` (*Windows*) ou ``/opt/lampp/apache2/htdocs`` (*Linux*).
     
+4. **Configurer la base de donnée**
+    Se rendre sur `http://localhost:8080/phpmyadmin`, se rendre dans l'onglet `SQL` puis copier coller la base de données téléchargeable.
+    
     
 ## Utilisation
 ### Lancer le site
@@ -57,3 +60,4 @@ Docto-Covid-Allo est une plateforme qui permet de mettre en relation les patient
 - Chat avec un médecin
 - Questionnaire lié au Covid-19
 - Création d'un compte
+
