@@ -52,3 +52,8 @@ Docto-Covid-Allo est une plateforme qui permet de mettre en relation les patient
 &nbsp;
 
 ## Fonctionnalités
+
+- Trouver un médecin
+- Chat avec un médecin
+- Questionnaire lié au Covid-19
+- Création d'un compte
